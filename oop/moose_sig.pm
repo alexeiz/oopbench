@@ -1,18 +1,17 @@
-package oop::moose;
+package oop::moose_sig;
 use common::sense;
 use workload;
 use Moose;
+use Method::Signatures;
 
 has name =>   (is => 'ro', isa => 'Str');
 has result => (is => 'rw', isa => 'ArrayRef');
 
-sub run {
-    my $self = shift;
+method run() {
     $self->result(workload->run());
 }
 
-sub run_arg1 {
-    my ($self, $arg1) = @_;
+method run_arg1($arg1) {
     $self->result(workload->run_arg1($arg1));
 }
 
