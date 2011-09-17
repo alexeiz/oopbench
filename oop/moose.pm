@@ -1,7 +1,9 @@
 package oop::moose;
 use common::sense;
 use workload;
+
 use Moose;
+use namespace::autoclean;
 
 has name =>   (is => 'ro', isa => 'Str');
 has result => (is => 'rw', isa => 'ArrayRef');

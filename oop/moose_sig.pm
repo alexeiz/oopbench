@@ -1,8 +1,10 @@
 package oop::moose_sig;
 use common::sense;
 use workload;
+
 use Moose;
 use Method::Signatures;
+use namespace::autoclean;
 
 has name =>   (is => 'ro', isa => 'Str');
 has result => (is => 'rw', isa => 'ArrayRef');
