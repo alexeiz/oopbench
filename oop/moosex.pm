@@ -1,3 +1,5 @@
+# Use MooseX::Declare to implement a class.
+
 use MooseX::Declare;
 
 class oop::moosex {

@@ -1,3 +1,5 @@
+# Use Moose to implement a class and Method::Signatures to implement methods.
+
 package oop::moose_sig;
 use common::sense;
 use workload;

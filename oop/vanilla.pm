@@ -1,3 +1,5 @@
+# Implement a class using a plain vanilla Perl without any supporting OOP packages.
+
 package oop::vanilla;
 use common::sense;
 use workload;

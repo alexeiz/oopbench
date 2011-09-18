@@ -1,3 +1,6 @@
+# This package implements several methods that simulate a simple workload for
+# performance tests of packages in the 'oop' namespace.
+
 package workload;
 use common::sense;
 

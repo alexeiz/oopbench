@@ -1,4 +1,9 @@
-use 5.014;
+#!/usr/bin/env perl
+
+# Benchmark the performance of various packages that implement support for OOP
+# in Perl.
+
+use 5.010;
 use common::sense;
 use Benchmark qw(:all);
 

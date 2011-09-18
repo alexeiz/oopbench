@@ -1,3 +1,5 @@
+# Use Moose to implement a class.
+
 package oop::moose;
 use common::sense;
 use workload;
