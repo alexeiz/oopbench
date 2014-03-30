@@ -3,7 +3,7 @@
 # Benchmark the performance of various packages that implement support for OOP
 # in Perl.
 
-use 5.016;
+use 5.018;
 use common::sense;
 use Benchmark qw(:all);
 
