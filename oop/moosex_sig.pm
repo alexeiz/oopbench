@@ -6,7 +6,7 @@ use MooseX::Declare;
 
 class oop::moosex_sig {
     use Method::Signatures::Simple name => 'def';
-    # use Method::Signatures produces a 'method redifinition' error
+    # use Method::Signatures produces a 'method redefinition' error
     use workload;
 
     has name =>   (is => 'ro', isa => 'Str');
