@@ -3,12 +3,13 @@
 # Benchmark the performance of various packages that implement support for OOP
 # in Perl.
 
-use 5.018;
+use 5.020;
 use common::sense;
 use Benchmark qw(:all);
 
 use workload;
 use oop::vanilla;
+use oop::vanilla_sig;
 use oop::moose;
 use oop::moose_sig;
 use oop::moosex;
@@ -18,6 +19,7 @@ use oop::moops_moose;
 
 my $procedural;
 my $vanilla;
+my $vanilla_sig;
 my $moose;
 my $moose_sig;
 my $moosex;
@@ -28,6 +30,7 @@ my $prop;
 
 my %new_tests =
     (vanilla     => sub { $vanilla = oop::vanilla->new(name => 'vanilla') },
+     vanilla_sig => sub { $vanilla_sig = oop::vanilla_sig->new(name => 'vanilla_sig') },
      moose       => sub { $moose = oop::moose->new(name => 'moose') },
      moose_sig   => sub { $moose_sig = oop::moose_sig->new(name => 'moose_sig') },
      moosex      => sub { $moosex = oop::moosex->new(name => 'moosex') },
@@ -37,6 +40,7 @@ my %new_tests =
 
 my %call_tests =
     (vanilla     => sub { $vanilla->run() },
+     vanilla_sig => sub { $vanilla_sig->run() },
      moose       => sub { $moose->run() },
      moose_sig   => sub { $moose_sig->run() },
      moosex      => sub { $moosex->run() },
@@ -47,6 +51,7 @@ my %call_tests =
 
 my %call_tests_arg1 =
     (vanilla     => sub { $vanilla->run_arg1(5) },
+     vanilla_sig => sub { $vanilla_sig->run_arg1(5) },
      moose       => sub { $moose->run_arg1(5) },
      moose_sig   => sub { $moose_sig->run_arg1(5) },
      moosex      => sub { $moosex->run_arg1(5) },
@@ -57,6 +62,7 @@ my %call_tests_arg1 =
 
 my %prop_tests =
     (vanilla     => sub { $prop = scalar $vanilla->result },
+     vanilla_sig => sub { $prop = scalar $vanilla_sig->result },
      moose       => sub { $prop = scalar $moose->result },
      moose_sig   => sub { $prop = scalar $moose_sig->result },
      moosex      => sub { $prop = scalar $moosex->result },
